@@ -1,22 +1,32 @@
-def find(word_a, word_b):
+# Given
+# two strings, determine the minimum number of characters in either string that must be
+# modified to make the two strings anagrams. If it is not possible to make the two strings
+# anagrams, return -1.
+# return int[n]
+
+# determine how many times strings should be replaced so that a pair of strings can be anagrams
+def count(word_a, word_b):
     chars = set()
+    # chars other than duplication are swappable，thus deiscarding duplication as follows
     for char in word_a: 
         chars.add(char)
     for char in word_b: 
         chars.discard(char)
     return len(chars)
+
 def getMinimumDifference(a, b):
     # Write your code here
-    ans = []
-    # lenのチェック
-    
+    ans = []    
     for word_a,word_b in zip(a, b):
+        # when len of them pair are not same, they cannot be anagrams
         if len(word_a)!=len(word_b):
             ans.append(-1)
+        # when sorted chars are completely same, they must be anagrams
         elif sorted(list(word_a))==sorted(list(word_b)):
             ans.append(0)
+        # when len of their pair are same, they can be anagrams by replacing each char
         else:
-            ans.append(find(word_a, word_b))
+            ans.append(count(word_a, word_b))
     return ans
 
 
