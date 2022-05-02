@@ -6,13 +6,13 @@
 
 # determine how many times strings should be replaced so that a pair of strings can be anagrams
 def count(word_a, word_b):
-    chars = set()
-    # chars other than duplication are swappable，thus deiscarding duplication as follows
+    # chars other than duplication are swappable，thus discarding duplication as follows
+    word_a = list(word_a)
+    word_b = list(word_b)
     for char in word_a: 
-        chars.add(char)
-    for char in word_b: 
-        chars.discard(char)
-    return len(chars)
+      if char in word_b: 
+        word_b.remove(char)
+    return len(word_b)
 
 def getMinimumDifference(a, b):
     # Write your code here
