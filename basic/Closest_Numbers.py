@@ -1,6 +1,7 @@
-# Given an array of distinct integers, determine the minimum absolute difference between
-# any two elements. Print all element pairs with that difference in ascending order.
-
+'''''
+Given an array of distinct integers, determine the minimum absolute difference between
+any two elements. Print all element pairs with that difference in ascending order.
+'''''
 def closestNumbers(numbers):
     # Write your code here
     numbers.sort()

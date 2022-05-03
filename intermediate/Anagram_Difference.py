@@ -1,9 +1,10 @@
-# Given
-# two strings, determine the minimum number of characters in either string that must be
-# modified to make the two strings anagrams. If it is not possible to make the two strings
-# anagrams, return -1.
-# return int[n]
-
+'''''
+Given
+two strings, determine the minimum number of characters in either string that must be
+modified to make the two strings anagrams. If it is not possible to make the two strings
+anagrams, return -1.
+return int[n]
+'''''
 # determine how many times strings should be replaced so that a pair of strings can be anagrams
 def count(word_a, word_b):
     # chars other than duplication are swappable，thus discarding duplication as follows
