@@ -4,9 +4,8 @@
 import sys
 
 def main(lines):
-  target = int(lines[-1])
+  target = int(lines.pop())
   # print(lines)
-  lines.pop()
   lines = [l.split(':') for l in lines]
   dic = {int(l[0]):l[1] for l in lines}
   ans_key = []
