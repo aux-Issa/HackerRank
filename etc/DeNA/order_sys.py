@@ -45,7 +45,7 @@ def main(lines):
         order_info[2] = int(order_info[2])
         order_and_completion.append(order_info)
     
-    print(order_and_completion)
+    # print(order_and_completion)
     # MW_num: 使用可能な電子レンジ数
     # 調理待ち
     wait_stack = []
@@ -103,8 +103,6 @@ def main(lines):
         order_info[2] = int(order_info[2])
         order.append(order_info)
 
-    # print(order)
-    # print(completion)
     for comp_info in completion:
       menu_code = comp_info[1]
       for i in range(len(order)):
@@ -113,9 +111,7 @@ def main(lines):
           order.pop(i)
           print('ready ' + str(seat_code)+' ' + str(menu_code))
           break
-        else:
-          print('error')
-    # print('ready '+席番号+料理番号)
+
   elif step == 4:
     num_menu_type = int(lines.pop(0))
     menu_info = [lines.pop(0).split(" ") for _ in range(num_menu_type)]
@@ -147,7 +143,6 @@ def main(lines):
         check_info[1] = int(check_info[1])
         order_ready_check.append(check_info)
 
-    # print(order_ready_check)
     order_dic = {}
     sum_price_dic = {}
     # 種別,席番号，料理番号
